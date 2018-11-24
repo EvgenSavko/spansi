@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../src/act/font/Poppins/Poppins-Light.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../src/act/font/Poppins/Poppins-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+body {
+  font-family: 'Poppins-Light', sans-serif
+}
+
+p {
+  font-family: 'Poppins-Regular', sans-serif
+}
