@@ -1,0 +1,21 @@
+.background_home {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px; 
+  background: rgba(10,10,10, .3);
+}
+
+.background_home > div {
+  background-image: url(http://newharvestch.org/wp-content/uploads/earth-is-not-flat-here-is-the-proof.png) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+      background-color: #999;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  z-index: -1;    
+}
