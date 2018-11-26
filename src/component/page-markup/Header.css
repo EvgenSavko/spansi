@@ -1,24 +1,27 @@
 .block_header {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  color: white;
 }
 
 .block_header h4, h5 {
   margin: 5px 0px 5px 0px;
+  cursor: pointer;
 }
 
 .left {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 20%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .center {
-  border: 1px solid blueviolet;
+  /* border: 1px solid blueviolet; */
   width: 60%;
   display: flex;
   justify-content: center;  
   align-items: center;
+  background: linear-gradient(to left, rgba(48, 47, 47, 0) 0%, rgba(70, 70, 70, 0.2) 50%,  rgba(48, 47, 47, 0) 100%);
 }
 
 .center > div {
@@ -26,7 +29,7 @@
 }
 
 .right {
-  border: 1px solid burlywood;
+  /* border: 1px solid burlywood; */
   width: 20%;
   display: flex;
   justify-content: flex-end;

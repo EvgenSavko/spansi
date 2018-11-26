@@ -9,10 +9,12 @@ class Home extends Component {
           <div />
           <div />
         </div>
-        <h2>Home</h2>
-        <p>
-          Apod <span> go moon</span>
-        </p>
+        <div className="content">
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+        </div>
       </div>
     );
   }
