@@ -1,14 +1,14 @@
-.background_home > div:nth-child(1){
+.background_mars > div:nth-child(1){
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0px; 
-  background: rgba(10,10,10, .3);
+  background: rgba(10,10,10, .2);
   z-index: -1;  
 }
 
-.background_home > div:nth-child(2) {
-  background-image: url('../act/image/earth.png') ;
+.background_mars > div:nth-child(2) {
+  background-image: url('../act/image/mars.jpg') ;
 			background-position: center center;
 			background-repeat:  no-repeat;
 			background-attachment: fixed;
