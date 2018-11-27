@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
+import Equalizer from '../equalizer/Equalizer';
 
 class Header extends Component {
   render() {
@@ -8,7 +10,9 @@ class Header extends Component {
         <div className="content">
           <div className="row">
             <div className="left">
-              <h5>SPANSI</h5>
+              <Link to={`/`}>
+                <h5>SPANSI</h5>
+              </Link>
             </div>
             <div className="center">
               <div>
@@ -19,9 +23,7 @@ class Header extends Component {
               </div>
             </div>
             <div className="right">
-              <div>
-                <h5>.|œ0|</h5>
-              </div>
+              <Equalizer />
               <div>
                 <h5>23:22</h5>
               </div>
