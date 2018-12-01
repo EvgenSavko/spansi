@@ -19,9 +19,14 @@ body {
   padding: 0;
 }
 
+.red {
+  border: 1px solid red;
+}
+
 .content {
   margin: auto 2%;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;

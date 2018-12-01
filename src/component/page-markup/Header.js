@@ -23,7 +23,9 @@ class Header extends Component {
               </div>
             </div>
             <div className="right">
-              <Equalizer />
+              <div>
+                <Equalizer />
+              </div>
               <div>
                 <h5>23:22</h5>
               </div>
