@@ -14,6 +14,40 @@ class Home extends Component {
           <p>
             Apod <span> go moon</span>
           </p>
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
+          <h2>Home</h2>
+          <p>
+            Apod <span> go moon</span>
+          </p>
         </div>
       </div>
     );

@@ -1,0 +1,202 @@
+.block_footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start; 
+}
+
+.body_footer {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  background: #2d2d2d;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.end_footer {
+  width: 0;
+  height: 0;
+	border-bottom: 30px solid #2d2d2d; 
+	border-right: 35px solid transparent;
+}
+
+.logo {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background-image: url('../../act/image/logo.png') ;
+  background-position: center center;
+			background-repeat:  no-repeat;
+      background-size:  cover;
+  animation-name: active_off;
+  animation-duration: 0.5s;
+  -webkit-animation-name: active_off;
+  -webkit-animation-duration: 0.5s;
+}
+@keyframes active_off{
+  0% {background-image: url('../../act/image/logo_active.png') ;}
+  100% {background-image: url('../../act/image/logo.png') ;}
+}
+
+.logo:hover {
+  background-image: url('../../act/image/logo_active.png') ;
+  background-position: center center;
+			background-repeat:  no-repeat;
+      background-size:  cover;
+  animation-name: active;
+  animation-duration: 0.5s;
+  -webkit-animation-name: active;
+  -webkit-animation-duration: 0.5s;
+}
+
+@keyframes active{
+  0% {background-image: url('../../act/image/logo.png') ;}
+  100% {background-image: url('../../act/image/logo_active.png') ;}
+}
+
+
+
+.ul_footer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;  
+}
+
+.ul_footer li {
+  list-style-type: none; 
+  margin-left: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.li_active {
+  border-bottom: 1px solid whitesmoke !important;
+}
+
+.ul_footer li h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.ul_footer li h1.insetshadow0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background0 8s infinite ;
+}
+.ul_footer li h1.insetshadow1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background 8s infinite ;
+}
+.ul_footer li h1.insetshadow2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background2 8s infinite ;
+}
+.ul_footer li h1.insetshadow3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background3 8s infinite ;
+}
+.ul_footer li h1.insetshadow00 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background00 8s infinite ;
+  animation-delay: 2s ;
+}
+.ul_footer li h1.insetshadow11 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background11 8s infinite ;
+  animation-delay: 2s ;
+}
+.ul_footer li h1.insetshadow22 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background22 8s infinite ;
+  animation-delay: 2s ;
+}
+.ul_footer li h1.insetshadow33 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  animation: background33 8s infinite ;
+  animation-delay: 2s ;
+}
+
+@keyframes background0 {
+  45% {
+    color: rgba(0, 123, 167, 0.9);
+  }
+}
+@keyframes background {
+  55% {
+    color: rgba(0, 123, 167, 0.9);
+  }
+}
+@keyframes background2 {
+  65% {
+    color: rgba(0, 123, 167, 0.9);
+  }
+}
+@keyframes background3 {
+  70% {
+    color: rgba(0, 123, 167, 0.9);
+  }
+}
+@keyframes background00 {
+  45% {
+    color: rgba(139, 0, 0, 0.9);
+  }
+}
+@keyframes background11 {
+  55% {
+    color: rgba(139, 0, 0, 0.9);
+  }
+}
+@keyframes background22 {
+  65% {
+    color: rgba(139, 0, 0, 0.9);
+  }
+}
+@keyframes background33 {
+  70% {
+    color: rgba(139, 0, 0, 0.9);
+  }
+}

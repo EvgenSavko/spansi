@@ -19,6 +19,10 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .red {
   border: 1px solid red;
 }

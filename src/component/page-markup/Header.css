@@ -1,10 +1,18 @@
 .block_header {
   /* border: 1px solid red; */
   color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .block_header h4, h5 {
   margin: 5px 0px 5px 0px;
+  cursor: pointer;
+}
+
+.block_header h4:hover, h5:hover {
+  text-shadow: 0 0 3px whitesmoke;
   cursor: pointer;
 }
 

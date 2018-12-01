@@ -17,8 +17,7 @@ class Equalizer extends Component {
       <div>
         <ReactAudioPlayer
           // src="https://upload.wikimedia.org/wikipedia/commons/d/db/Gimn_Sovetskogo_Soyuza_%281977_Vocal%29.oga"
-          src="./../../act/audio/God_Is_An_astronaut_Loss (online-audio-converter.com).ogg"
-          type="audio/ogg"
+          src="../../../act/audio/God_Is_An_astronaut_Loss.ogg"
           autoPlay
           ref={element => {
             this.rap = element;
