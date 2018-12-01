@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import './Header.css';
+
 import Equalizer from '../equalizer/Equalizer';
+import Clock from '../clock/Clock';
 
 class Header extends Component {
   render() {
@@ -27,7 +30,7 @@ class Header extends Component {
                 <Equalizer />
               </div>
               <div>
-                <h5>23:22</h5>
+                <Clock />
               </div>
             </div>
           </div>
