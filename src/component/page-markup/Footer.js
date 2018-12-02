@@ -30,18 +30,12 @@ class Footer extends Component {
           >
             <Link to={`/`}>
               <li className="row li_active" onClick={this.toggleClass}>
-                <h1 className="insetshadow0">A</h1>
-                <h1 className="insetshadow1">P</h1>
-                <h1 className="insetshadow2">O</h1>
-                <h1 className="insetshadow3">D</h1>
+                <h1 className="insetshadow0">APOD</h1>
               </li>
             </Link>
             <Link to={`/Mars`}>
               <li className="row" onClick={this.toggleClass}>
-                <h1 className="insetshadow00">M</h1>
-                <h1 className="insetshadow11">A</h1>
-                <h1 className="insetshadow22">R</h1>
-                <h1 className="insetshadow33">S</h1>
+                <h1 className="insetshadow00">MARS</h1>
               </li>
             </Link>
             <Link to={`/`}>
