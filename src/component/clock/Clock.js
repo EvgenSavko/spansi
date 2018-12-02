@@ -13,10 +13,20 @@ class Clock extends Component {
     if (this.state.clock !== `${hh}:${mm}`) this.setState({ clock: `${hh}:${mm}` });
   };
 
-  render() {
-    setInterval(() => {
+  componentDidMount() {
+    this.interval = setInterval(() => {
       this.setTimer();
     }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    // setInterval(() => {
+    //   this.setTimer();
+    // }, 1000);
     return <h5>{this.state.clock}</h5>;
   }
 }
