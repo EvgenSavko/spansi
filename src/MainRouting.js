@@ -6,10 +6,12 @@ import Mars from './screens/Mars';
 class MainRouting extends Component {
   render() {
     return (
+      <main>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/Mars" component={Mars} />
       </Switch>
+      </main>
     );
   }
 }

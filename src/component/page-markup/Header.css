@@ -1,9 +1,9 @@
 .block_header {
   /* border: 1px solid red; */
   color: whitesmoke;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
-  top: 0;
+  /* top: 0; */
 }
 
 .block_header h4, h5 {

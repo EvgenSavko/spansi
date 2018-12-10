@@ -4,7 +4,7 @@ import './Mars.css';
 class Mars extends Component {
   render() {
     return (
-      <div>
+      <div className="_mars">
         <div className="background_mars">
           <div />
           <div />
