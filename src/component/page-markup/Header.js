@@ -9,7 +9,7 @@ import Clock from '../clock/Clock';
 class Header extends Component {
   render() {
     return (
-      <div className="block_header">
+      <header className="block_header">
         <div className="content">
           <div className="row">
             <div className="left">
@@ -35,7 +35,7 @@ class Header extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </header>
     );
   }
 }

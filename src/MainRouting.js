@@ -19,9 +19,6 @@ class MainRouting extends Component {
     const hf = footer[0].clientHeight;
     const hd = html[0].clientHeight;
     const main = hd - hf - hh - 37;
-    console.log('header', hh);
-    console.log('footer', hf);
-    console.log('document', hd);
     if (hh !== this.state.hh) this.setState({ hh });
     if (hf !== this.state.hf) this.setState({ hf });
     if (hd !== this.state.hd) this.setState({ hd });
@@ -37,9 +34,6 @@ class MainRouting extends Component {
       const hf = footer[0].clientHeight;
       const hd = html[0].clientHeight;
       const main = hd - hf - hh - 37;
-      console.log('header', hh);
-      console.log('footer', hf);
-      console.log('document', hd);
       if (hh !== this.state.hh) this.setState({ hh });
       if (hf !== this.state.hf) this.setState({ hf });
       if (hd !== this.state.hd) this.setState({ hd });
@@ -51,7 +45,7 @@ class MainRouting extends Component {
     this.resize();
     console.log('document', this.state.main);
     return (
-      <main style={{ minHeight: this.state.main }}>
+      <main style={{ minHeight: this.state.main + 'px' }}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Mars" component={Mars} />

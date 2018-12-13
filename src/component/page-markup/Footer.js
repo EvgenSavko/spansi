@@ -17,7 +17,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="block_footer ">
+      <footer className="block_footer ">
         <div className="body_footer">
           <Link to={`/`}>
             <div className="logo" onClick={this.toggleClass} />
@@ -45,7 +45,7 @@ class Footer extends Component {
         </div>
 
         <div className="end_footer" />
-      </div>
+      </footer>
     );
   }
 }
