@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Home.css';
+import TitlePage from '../component/page-markup/TitlePage';
 
 class Home extends Component {
   state = {
     isShow: true,
-    minHeight: '0px',
   };
 
   componentDidMount() {
@@ -16,24 +16,23 @@ class Home extends Component {
         this.setState({ isShow: false });
       }, 5000);
     }
-    const root = document.getElementById('root');
-    this.setState({ minHeight: root.clientHeight });
   }
 
   render() {
     return (
       <div>
         <div className="background_home">
-          <div style={{ minHeight: 93 + this.state.minHeight + 'px' }} />
-          <div style={{ minHeight: 93 + this.state.minHeight + 'px' }} />
+          <div />
+          <div />
         </div>
 
         <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
-          <h2>Home</h2>
+          <TitlePage name="Astronomy Picture of the Day" />
           <p>
             Apod <span> go moon</span>
           </p>
         </div>
+
         {this.state.isShow && (
           <div className="first_loader">
             <div id="stars" />

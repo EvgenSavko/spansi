@@ -29,6 +29,10 @@ main {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -44,4 +48,14 @@ a {
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.title_page {
+  padding: 10px 0 10px 55px;
+  color: whitesmoke;
+  background: linear-gradient(to right, 
+      rgba(48, 47, 47, 0) 0%, 
+      rgba(70, 70, 70, 0.2) 10%,  
+      rgba(48, 47, 47, 0) 100%);
+  width: 50%;
 }

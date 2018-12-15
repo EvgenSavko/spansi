@@ -16,6 +16,7 @@ class Footer extends Component {
   };
 
   render() {
+    console.log(document.location.pathname);
     return (
       <footer className="block_footer ">
         <div className="body_footer">
