@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { increment } from '../../actions/AC';
+import { increment } from './../../actions/increment';
 
 class ContentApod extends Component {
   componentDidMount() {
-    console.log(this.props);
+    console.log();
+    this.props.increment(5);
   }
 
   render() {
