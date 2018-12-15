@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import './Home.css';
 import TitlePage from '../component/page-markup/TitlePage';
+import ComponentAPOD from '../component/APOD/ContentApod';
 
 class Home extends Component {
   state = {
@@ -28,9 +30,7 @@ class Home extends Component {
 
         <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
           <TitlePage name="Astronomy Picture of the Day" />
-          <p>
-            Apod <span> go moon</span>
-          </p>
+          <ComponentAPOD />
         </div>
 
         {this.state.isShow && (
