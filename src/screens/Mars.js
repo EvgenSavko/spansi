@@ -15,77 +15,13 @@ class Mars extends Component {
     return (
       <div className="_mars">
         <div className="background_mars">
-          <div style={{ minHeight: 66 + this.state.minHeight + 'px' }} />
-          <div style={{ minHeight: 66 + this.state.minHeight + 'px' }} />
+          <div style={{ minHeight: 93 + this.state.minHeight + 'px' }} />
+          <div style={{ minHeight: 93 + this.state.minHeight + 'px' }} />
         </div>
 
         <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
           <h2>Mars</h2>
           <p>Roveer</p>
-          <h2>Home</h2>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
-          <p>
-            Mars <span> go mars</span>
-          </p>
         </div>
       </div>
     );

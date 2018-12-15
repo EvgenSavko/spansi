@@ -43,7 +43,6 @@ class MainRouting extends Component {
 
   render() {
     this.resize();
-    console.log('document', this.state.main);
     return (
       <main style={{ minHeight: this.state.main + 'px' }}>
         <Switch>

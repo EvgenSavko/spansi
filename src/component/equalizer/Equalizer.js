@@ -8,6 +8,7 @@ class Equalizer extends Component {
   };
 
   togglePlay = () => {
+    console.log(this.rap.audioEl.play());
     this.setState({ isPlay: !this.state.isPlay });
     this.state.isPlay ? this.rap.audioEl.pause() : this.rap.audioEl.play();
   };

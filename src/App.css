@@ -20,7 +20,13 @@ body {
 }
 
 main {
-  min-height: 100px;
+  margin-top: 46px;
+}
+
+@media (max-width: 430px) {
+  main {
+    margin-top: 73px;
+  }
 }
 
 a {

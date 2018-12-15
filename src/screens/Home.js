@@ -24,72 +24,12 @@ class Home extends Component {
     return (
       <div>
         <div className="background_home">
-          <div style={{ minHeight: 66 + this.state.minHeight + 'px' }} />
-          <div style={{ minHeight: 66 + this.state.minHeight + 'px' }} />
+          <div style={{ minHeight: 93 + this.state.minHeight + 'px' }} />
+          <div style={{ minHeight: 93 + this.state.minHeight + 'px' }} />
         </div>
 
         <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
           <h2>Home</h2>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
-          <p>
-            Apod <span> go moon</span>
-          </p>
           <p>
             Apod <span> go moon</span>
           </p>
