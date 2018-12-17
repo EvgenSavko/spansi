@@ -1,5 +1,7 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../reduser/index';
+import gotcha from './../middlewares/gotcha';
 
-const store = createStore(rootReducer);
+const enhancer = applyMiddleware(gotcha);
+const store = createStore(rootReducer, {}, enhancer);
 export default store;
