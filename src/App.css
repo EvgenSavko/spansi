@@ -59,3 +59,13 @@ a {
       rgba(48, 47, 47, 0) 100%);
   width: 50%;
 }
+
+@media (max-width: 430px) {
+  .title_page {
+    padding: 10px 0 10px 25px;
+    width: 100%;
+  }
+  .title_page h2{
+    font-size: 1rem;
+  }
+}
