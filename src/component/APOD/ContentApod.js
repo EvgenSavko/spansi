@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { increment } from './../../actions/increment';
+import { getAPOD } from './../../actions/apod.js';
 
 class ContentApod extends Component {
   componentDidMount() {
     console.log();
     this.props.increment(5);
+    this.props.getAPOD();
   }
 
   render() {
-    console.log(this.props);
+    console.log('state', this.props);
     return (
       <div>
         <p>
@@ -24,6 +26,7 @@ class ContentApod extends Component {
 export default connect(
   state => ({
     counter: state.count,
+    apod: state.apod,
   }),
-  { increment }
+  { increment, getAPOD }
 )(ContentApod);

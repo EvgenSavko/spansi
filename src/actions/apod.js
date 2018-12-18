@@ -1,7 +1,8 @@
-import { FIRST_APOD } from '../constants';
+import { ADD_APOD } from '../constants';
 
-export function getFirsAPOD() {
+export function getAPOD(date) {
   return {
-    type: FIRST_APOD,
+    type: ADD_APOD,
+    data: date,
   };
 }

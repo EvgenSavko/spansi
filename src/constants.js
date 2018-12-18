@@ -1,3 +1,3 @@
 export const INCREMENT = 'INCREMENT';
 
-export const FIRST_APOD = 'FIRST_APOD';
+export const ADD_APOD = 'ADD_APOD';

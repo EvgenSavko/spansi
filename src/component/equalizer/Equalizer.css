@@ -14,7 +14,7 @@
 
 .equalizer_off {
   cursor: pointer;
-  display:inline-block;
+  /* display:inline-block; */
   /* margin-top:100px; */
   /* margin-right: 10px; */
   margin-bottom: 2px;
