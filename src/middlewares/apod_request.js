@@ -9,5 +9,7 @@ export default store => next => action => {
         next(action);
       });
   }
+
+  // action.data = { date: '2' };
   // next(action);
 };

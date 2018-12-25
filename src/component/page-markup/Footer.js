@@ -20,7 +20,7 @@ class Footer extends Component {
     return (
       <footer className="block_footer ">
         <div className="body_footer">
-          <Link to={`/`}>
+          <Link to="/">
             <div className="logo" onClick={this.toggleClass} />
           </Link>
           <ul

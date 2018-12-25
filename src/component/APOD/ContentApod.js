@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { increment } from './../../actions/increment';
 import { getAPOD } from './../../actions/apod.js';
 
 class ContentApod extends Component {
+  state = {
+    date: [],
+  };
+
   componentDidMount() {
-    console.log();
-    this.props.increment(5);
     this.props.getAPOD();
+    this.setState({
+      date: this.props.apod,
+    });
   }
 
   render() {
-    console.log('state', this.props);
+    console.log('state', this.state);
+    console.log('props', this.props);
     return (
-      <div>
+      <div style={{ color: 'white' }}>
         <p>
-          Apod <span> go moon 1212312</span>
+          Apod <span> go moon </span>
         </p>
+        {this.props.apod.length && this.props.apod.map(item => <p key={item.date}>{item.date}</p>)}
       </div>
     );
   }
@@ -25,8 +31,12 @@ class ContentApod extends Component {
 
 export default connect(
   state => ({
-    counter: state.count,
     apod: state.apod,
   }),
-  { increment, getAPOD }
+  // dispatch => {
+  //   return {
+  //     getAPOD2: () => dispatch(getAPOD()),
+  //   };
+  // }
+  { getAPOD }
 )(ContentApod);
