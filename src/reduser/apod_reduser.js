@@ -1,7 +1,7 @@
 import { ADD_APOD } from '../constants';
 
 const initObject = {
-  date: '1',
+  date: '',
 };
 
 function apod_reduser(arr = [initObject], action) {
