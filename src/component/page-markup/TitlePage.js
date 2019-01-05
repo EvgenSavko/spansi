@@ -5,7 +5,7 @@ class TitlePage extends Component {
     const { name } = this.props;
     return (
       <div className="title_page">
-        <h2>{name}</h2>
+        <h1>{name}</h1>
       </div>
     );
   }
