@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './ContentApod.css';
 import { getAPOD } from './../../actions/apod.js';
-import PlaceholderImage from './Loader';
+import Load from './Loader';
 
 class ContentApod extends Component {
   componentDidMount() {
@@ -17,29 +17,23 @@ class ContentApod extends Component {
     const { url, title, explanation } = this.props.apod[0];
     return (
       <div className="concent_apod" style={{ color: 'white', border: '1px solid red' }}>
-        {!url && (
+        {!url && <Load />}
+
+        {url && (
           <div className="row ">
             <div className="img_apod ">
-              <div className="image border">
-                <PlaceholderImage />
+              <div className="image border" style={{ backgroundImage: `url(${url})` }} />
+            </div>
+            <div className="article_apod ">
+              <div className="title_article">
+                <h2>{title}</h2>
+              </div>
+              <div className="paragraph_article">
+                <p>{explanation}</p>
               </div>
             </div>
           </div>
         )}
-
-        <div className="row ">
-          <div className="img_apod ">
-            <div className="image border" style={{ backgroundImage: `url(${url})` }} />
-          </div>
-          <div className="article_apod ">
-            <div className="title_article">
-              <h2>{title}</h2>
-            </div>
-            <div className="paragraph_article">
-              <p>{explanation}</p>
-            </div>
-          </div>
-        </div>
 
         {/* {this.props.apod.length && this.props.apod.map(item => <p key={item.date}>{item.date}</p>)} */}
       </div>
