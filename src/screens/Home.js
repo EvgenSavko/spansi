@@ -30,6 +30,7 @@ class Home extends Component {
 
         <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
           <TitlePage name="Astronomy Picture of the Day" />
+          <div style={{ marginTop: '10px' }} />
           <ComponentAPOD />
         </div>
 

@@ -1,7 +1,7 @@
 .block_footer {
-  /* position: fixed;
-  bottom: 0; */
-  position: static;
+  position: fixed;
+  bottom: 0;
+  /* position: static; */
   display: flex;
   justify-content: flex-start; 
 }

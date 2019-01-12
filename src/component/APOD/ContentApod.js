@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import './ContentApod.css';
 import { getAPOD } from './../../actions/apod.js';
+import PlaceholderImage from './Loader';
 
 class ContentApod extends Component {
   componentDidMount() {
@@ -15,15 +16,22 @@ class ContentApod extends Component {
     console.log('props', this.props);
     const { url, title, explanation } = this.props.apod[0];
     return (
-      <div style={{ color: 'white', border: '1px solid red' }}>
-        {/* <p>
-          Apod <span> go moon {date}</span>
-        </p> */}
-        <div className="row red">
-          <div className="img_apod red">
-            <div className="image" style={{ backgroundImage: `url(${url})` }} />
+      <div className="concent_apod" style={{ color: 'white', border: '1px solid red' }}>
+        {!url && (
+          <div className="row ">
+            <div className="img_apod ">
+              <div className="image border">
+                <PlaceholderImage />
+              </div>
+            </div>
           </div>
-          <div className="article_apod red">
+        )}
+
+        <div className="row ">
+          <div className="img_apod ">
+            <div className="image border" style={{ backgroundImage: `url(${url})` }} />
+          </div>
+          <div className="article_apod ">
             <div className="title_article">
               <h2>{title}</h2>
             </div>

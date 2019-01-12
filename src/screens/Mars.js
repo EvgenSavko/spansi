@@ -9,7 +9,7 @@ class Mars extends Component {
 
   render() {
     return (
-      <div className="_mars">
+      <div>
         <div className="background_mars">
           <div />
           <div />
@@ -17,7 +17,7 @@ class Mars extends Component {
 
         <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
           <TitlePage name="Rovers on Mars" />
-          <p>Roveer</p>
+          <p style={{ color: 'white' }}>Roveer</p>
         </div>
       </div>
     );

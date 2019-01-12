@@ -18,7 +18,7 @@ class MainRouting extends Component {
     const hh = header[0].clientHeight;
     const hf = footer[0].clientHeight;
     const hd = html[0].clientHeight;
-    const main = hd - hf - hh - 45;
+    const main = hd - hf - hh - 30;
     if (hh !== this.state.hh) this.setState({ hh });
     if (hf !== this.state.hf) this.setState({ hf });
     if (hd !== this.state.hd) this.setState({ hd });
@@ -33,7 +33,7 @@ class MainRouting extends Component {
       const hh = header[0].clientHeight;
       const hf = footer[0].clientHeight;
       const hd = html[0].clientHeight;
-      const main = hd - hf - hh - 45;
+      const main = hd - hf - hh;
       if (hh !== this.state.hh) this.setState({ hh });
       if (hf !== this.state.hf) this.setState({ hf });
       if (hd !== this.state.hd) this.setState({ hd });
