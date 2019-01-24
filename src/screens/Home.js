@@ -30,7 +30,7 @@ class Home extends Component {
 
         <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
           <TitlePage name="Astronomy Picture of the Day" />
-          <div style={{ marginTop: '10px' }} />
+          <div style={{ marginTop: '15px' }} />
           <ComponentAPOD />
         </div>
 
@@ -41,6 +41,8 @@ class Home extends Component {
             <div id="stars3" />
             <div id="title">
               <span>you are welcome</span>
+              <br />
+              <br />
               <br />
               <span>to SPANSI</span>
             </div>

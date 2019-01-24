@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 import './ContentApod.css';
 import { getAPOD } from './../../actions/apod.js';
+
 import Load from './Loader';
+import ChoiceDateAPOD from './ChoiceDateAPOD';
 
 class ContentApod extends Component {
   componentDidMount() {
@@ -14,15 +16,15 @@ class ContentApod extends Component {
 
   render() {
     console.log('props', this.props);
-    const { url, title, explanation } = this.props.apod[0];
+    const { hdurl, title, explanation } = this.props.apod[0];
     return (
       <div className="concent_apod" style={{ color: 'white', border: '1px solid red' }}>
-        {!url && <Load />}
+        {!hdurl && <Load />}
 
-        {url && (
+        {hdurl && (
           <div className="row ">
             <div className="img_apod ">
-              <div className="image border" style={{ backgroundImage: `url(${url})` }} />
+              <div className="image border" style={{ backgroundImage: `url(${hdurl})` }} />
             </div>
             <div className="article_apod ">
               <div className="title_article">
@@ -30,6 +32,9 @@ class ContentApod extends Component {
               </div>
               <div className="paragraph_article">
                 <p>{explanation}</p>
+              </div>
+              <div className="choice_date">
+                <ChoiceDateAPOD />
               </div>
             </div>
           </div>
@@ -45,10 +50,5 @@ export default connect(
   state => ({
     apod: state.apod,
   }),
-  // dispatch => {
-  //   return {
-  //     getAPOD2: () => dispatch(getAPOD()),
-  //   };
-  // }
   { getAPOD }
 )(ContentApod);
