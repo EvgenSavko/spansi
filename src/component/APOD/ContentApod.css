@@ -64,12 +64,51 @@
 
 .dataPickerAPOD > div {
   width: 160px !important;
+  cursor: pointer !important;
+}
+
+.dataPickerAPOD  > div:hover > div{
+    color: rgba(0, 123, 167, 1) !important;
+    transition: all ease 0.5s;
 }
 
 .dataPickerAPOD > div > div {
   color: rgb(224, 224, 224) !important;
 }
 
+.dataPickerAPOD  > div:hover > input{
+  color: rgba(0, 123, 167, 1) !important;
+  transition: all ease 0.5s;
+}
+
 .dataPickerAPOD > div > input {
   color: rgb(224, 224, 224) !important;
+}
+
+.datePicker {
+  position: relative;
+  width: 30%;
+}
+
+.add_icon{
+ position: absolute;
+ top: 14px;
+ left: 133px;
+ color: rgb(224, 224, 224) !important;
+ z-index: -1;
+}
+
+.controleChoiceDate{
+  display: flex;
+  align-items: center
+}
+
+.row_btn_controle_APOD {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+.btn_controle_APOD {
+  font-size: 14px !important;
+  padding: 8px 17px !important;
 }

@@ -16,15 +16,28 @@ class ContentApod extends Component {
 
   render() {
     console.log('props', this.props);
-    const { hdurl, title, explanation } = this.props.apod[0];
+    const { url, title, explanation, media_type } = this.props.apod[0];
     return (
       <div className="concent_apod" style={{ color: 'white', border: '1px solid red' }}>
-        {!hdurl && <Load />}
+        {!url && <Load />}
 
-        {hdurl && (
+        {url && (
           <div className="row ">
             <div className="img_apod ">
-              <div className="image border" style={{ backgroundImage: `url(${hdurl})` }} />
+              {media_type === 'image' && (
+                <div className="image border" style={{ backgroundImage: `url(${url})` }} />
+              )}
+              {media_type === 'video' && (
+                <iframe
+                  src={`${url}&autoplay=1&showinfo=0`}
+                  className="image border"
+                  allowFullScreen=""
+                  frameBorder="0"
+                  scrolling="no"
+                  allow="autoplay"
+                  title={title}
+                />
+              )}
             </div>
             <div className="article_apod ">
               <div className="title_article">
