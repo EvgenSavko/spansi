@@ -87,7 +87,7 @@
 
 .datePicker {
   position: relative;
-  width: 30%;
+  width: 180px;
 }
 
 .add_icon{
@@ -105,7 +105,7 @@
 
 .row_btn_controle_APOD {
   display: flex;
-  width: 25%;
+  width: 150px;
   justify-content: space-between;
 }
 .btn_controle_APOD {

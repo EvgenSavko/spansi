@@ -29,7 +29,7 @@ class ContentApod extends Component {
               )}
               {media_type === 'video' && (
                 <iframe
-                  src={`${url}&autoplay=1&showinfo=0`}
+                  src={`${url}&autoplay=1`}
                   className="image border"
                   allowFullScreen=""
                   frameBorder="0"
