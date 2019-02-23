@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Button, Icon } from 'semantic-ui-react';
 import moment from 'moment';
 
-import { getAPOD } from './../../actions/apod.js';
+import { getAPOD, prevAPOD } from './../../actions/apod.js';
 
 class ChoiceDateAPOD extends Component {
   maxDate = new Date();
@@ -18,6 +18,10 @@ class ChoiceDateAPOD extends Component {
     let formatDate = moment(date).format('YYYY-MM-DD');
     console.log(formatDate);
     this.props.getAPOD(formatDate);
+  }
+
+  onPrevAPOD() {
+    this.props.prevAPOD();
   }
 
   render() {
@@ -38,7 +42,7 @@ class ChoiceDateAPOD extends Component {
           <MdPlaylistAdd size="1.5rem" className="add_icon" />
         </div>
         <div className="row_btn_controle_APOD">
-          <Button animated className="btn_controle_APOD">
+          <Button animated className="btn_controle_APOD" onClick={() => this.onPrevAPOD()}>
             <Button.Content visible>Prev</Button.Content>
             <Button.Content hidden>
               <Icon name="arrow left" />
@@ -60,5 +64,5 @@ export default connect(
   state => ({
     apod: state.apod,
   }),
-  { getAPOD }
+  { getAPOD, prevAPOD }
 )(ChoiceDateAPOD);
