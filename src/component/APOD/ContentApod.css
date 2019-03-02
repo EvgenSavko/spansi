@@ -100,14 +100,23 @@
 
 .controleChoiceDate{
   display: flex;
-  align-items: center
+  align-items: center;
+  justify-content: space-between;
 }
 
 .row_btn_controle_APOD {
   display: flex;
   width: 150px;
   justify-content: space-between;
+  position: relative;
 }
+
+.label_controle_APOD {
+  top: -20px;
+  color: darkgray;
+  position: absolute;
+}
+
 .btn_controle_APOD {
   font-size: 14px !important;
   padding: 8px 17px !important;

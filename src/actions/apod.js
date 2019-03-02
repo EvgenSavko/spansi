@@ -1,4 +1,4 @@
-import { ADD_APOD, PREV_APOD } from '../constants';
+import { ADD_APOD, PREV_APOD, NEXT_APOD } from '../constants';
 
 export function getAPOD(date) {
   return {
@@ -10,6 +10,12 @@ export function getAPOD(date) {
 export function prevAPOD() {
   return {
     type: PREV_APOD,
+  };
+}
+
+export function nextAPOD() {
+  return {
+    type: NEXT_APOD,
   };
 }
 

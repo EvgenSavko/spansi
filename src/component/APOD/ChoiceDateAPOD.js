@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Button, Icon } from 'semantic-ui-react';
 import moment from 'moment';
 
-import { getAPOD, prevAPOD } from './../../actions/apod.js';
+import { getAPOD, prevAPOD, nextAPOD } from './../../actions/apod.js';
 
 class ChoiceDateAPOD extends Component {
   maxDate = new Date();
@@ -24,6 +24,16 @@ class ChoiceDateAPOD extends Component {
     this.props.prevAPOD();
   }
 
+  onNextAPOD() {
+    this.props.nextAPOD();
+  }
+
+  getHistoryDate() {
+    const { date } = this.props.apod[0];
+    if (this.props.apod.length > 1) return moment(date)._d;
+    else return null;
+  }
+
   render() {
     return (
       <div className="controleChoiceDate">
@@ -36,6 +46,7 @@ class ChoiceDateAPOD extends Component {
               autoOk={true}
               maxDate={this.maxDate}
               minDate={this.minDate}
+              value={this.getHistoryDate()}
               onChange={(e, date) => this.onGetDate(e, date)}
             />
           </MuiThemeProvider>
@@ -48,12 +59,13 @@ class ChoiceDateAPOD extends Component {
               <Icon name="arrow left" />
             </Button.Content>
           </Button>
-          <Button animated className="btn_controle_APOD">
+          <Button animated className="btn_controle_APOD" onClick={() => this.onNextAPOD()}>
             <Button.Content visible>Next</Button.Content>
             <Button.Content hidden>
               <Icon name="arrow right" />
             </Button.Content>
           </Button>
+          <label className="label_controle_APOD">switch view history</label>
         </div>
       </div>
     );
@@ -64,5 +76,5 @@ export default connect(
   state => ({
     apod: state.apod,
   }),
-  { getAPOD, prevAPOD }
+  { getAPOD, prevAPOD, nextAPOD }
 )(ChoiceDateAPOD);

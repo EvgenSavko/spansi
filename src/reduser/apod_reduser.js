@@ -1,4 +1,4 @@
-import { ADD_APOD, PREV_APOD } from '../constants';
+import { ADD_APOD, PREV_APOD, NEXT_APOD } from '../constants';
 
 const initObject = {
   // date: '',
@@ -14,11 +14,14 @@ function apod_reduser(arr = [initObject], action) {
       return filterArr;
     case PREV_APOD:
       const sortPrev = [...arr];
-      if (sortPrev[1].date) {
-        sortPrev.push(sortPrev[0]);
-        sortPrev.shift();
-        return sortPrev;
-      } else return sortPrev;
+      sortPrev.push(sortPrev[0]);
+      sortPrev.shift();
+      return sortPrev;
+    case NEXT_APOD:
+      const sortNext = [...arr];
+      sortNext.unshift(sortNext[sortNext.length - 1]);
+      sortNext.pop();
+      return sortNext;
     default:
       return arr;
   }
