@@ -34,6 +34,11 @@ class ChoiceDateAPOD extends Component {
     else return null;
   }
 
+  disabled() {
+    const { apod } = this.props;
+    if (apod.length === 1) return 'disabled';
+  }
+
   render() {
     return (
       <div className="controleChoiceDate">
@@ -53,13 +58,23 @@ class ChoiceDateAPOD extends Component {
           <MdPlaylistAdd size="1.5rem" className="add_icon" />
         </div>
         <div className="row_btn_controle_APOD">
-          <Button animated className="btn_controle_APOD" onClick={() => this.onPrevAPOD()}>
+          <Button
+            animated
+            className="btn_controle_APOD"
+            disabled={this.disabled()}
+            onClick={() => this.onPrevAPOD()}
+          >
             <Button.Content visible>Prev</Button.Content>
             <Button.Content hidden>
               <Icon name="arrow left" />
             </Button.Content>
           </Button>
-          <Button animated className="btn_controle_APOD" onClick={() => this.onNextAPOD()}>
+          <Button
+            animated
+            className="btn_controle_APOD"
+            disabled={this.disabled()}
+            onClick={() => this.onNextAPOD()}
+          >
             <Button.Content visible>Next</Button.Content>
             <Button.Content hidden>
               <Icon name="arrow right" />
