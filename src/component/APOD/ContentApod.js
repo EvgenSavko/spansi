@@ -18,7 +18,7 @@ class ContentApod extends Component {
     console.log('props', this.props);
     const { url, title, explanation, media_type } = this.props.apod[0];
     return (
-      <div className="concent_apod" style={{ color: 'white', border: '1px solid red' }}>
+      <div className="concent_apod" style={{ color: 'white' }}>
         {!url && <Load />}
 
         {url && (
