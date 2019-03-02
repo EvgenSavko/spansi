@@ -1,18 +1,17 @@
 import { ADD_APOD, PREV_APOD } from '../constants';
 
 const initObject = {
-  date: '',
+  // date: '',
 };
 
 function apod_reduser(arr = [initObject], action) {
   const { type, data } = action;
   switch (type) {
     case ADD_APOD:
-      console.log('apod reduser', data);
-      const test = [...arr];
-      test.unshift(data);
-      console.log('apod reduser test', test);
-      return test;
+      const newArr = [...arr];
+      newArr.unshift(data);
+      const filterArr = newArr.filter(item => item.date);
+      return filterArr;
     case PREV_APOD:
       const sortPrev = [...arr];
       if (sortPrev[1].date) {
