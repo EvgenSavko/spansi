@@ -36,7 +36,8 @@ class ChoiceDateAPOD extends Component {
 
   disabled() {
     const { apod } = this.props;
-    if (apod.length === 1) return 'disabled';
+    if (apod.length === 1) return true;
+    else return false;
   }
 
   render() {

@@ -7,9 +7,23 @@ import Equalizer from '../equalizer/Equalizer';
 import Clock from '../clock/Clock';
 
 class Header extends Component {
+  resize() {
+    window.addEventListener('scroll', () => {
+      let scrollHeight = document.documentElement.scrollTop;
+      if (scrollHeight > 20) this.head.classList.add('scroll_down');
+      else this.head.classList.remove('scroll_down');
+    });
+  }
+
   render() {
+    this.resize();
     return (
-      <header className="block_header">
+      <header
+        className="block_header"
+        ref={element => {
+          this.head = element;
+        }}
+      >
         <div className="content">
           <div className="row">
             <div className="left">
