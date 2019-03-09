@@ -61,10 +61,12 @@ class GalleryAPOD extends Component {
     const { apod } = this.props;
     return (
       <div className="gallery_apod">
-        <div className="title_article">
-          <h3>Gallery</h3>
-        </div>
-        {apod.length > 0 && <div className="row">{this.renderCart()}</div>}
+        {apod.length > 1 && (
+          <div className="title_article">
+            <h3>Gallery</h3>
+          </div>
+        )}
+        {apod.length > 1 && <div className="row">{this.renderCart()}</div>}
       </div>
     );
   }
