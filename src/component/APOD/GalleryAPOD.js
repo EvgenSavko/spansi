@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 class GalleryAPOD extends Component {
   renderCart() {
     const { apod } = this.props;
-    console.log('sort', this.sortAPODByDate(apod));
-    return this.sortAPODByDate(apod).map((item, index) => (
+    return this.removeDuplicates(this.sortAPODByDate(apod), 'date').map((item, index) => (
       <div className="cart_gallery" key={item.date + index++}>
         <div className="hover" />
         <h4 className="clip">{item.title}</h4>
@@ -42,6 +41,20 @@ class GalleryAPOD extends Component {
       }
       return 0;
     });
+  }
+
+  removeDuplicates(originalArray, prop) {
+    var newArray = [];
+    var lookupObject = {};
+
+    for (var i in originalArray) {
+      lookupObject[originalArray[i][prop]] = originalArray[i];
+    }
+
+    for (i in lookupObject) {
+      newArray.push(lookupObject[i]);
+    }
+    return newArray;
   }
 
   render() {
