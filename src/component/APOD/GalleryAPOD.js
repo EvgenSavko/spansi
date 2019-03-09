@@ -11,12 +11,20 @@ class GalleryAPOD extends Component {
         <h4 className="clip">{item.title}</h4>
         <h4>{item.date}</h4>
         <div className="img_apod_gallery">
-          <div
-            className="image border"
-            style={{
-              backgroundImage: `url(${item.url})`,
-            }}
-          />
+          {item.media_type === 'image' && (
+            <div className="image border" style={{ backgroundImage: `url(${item.url})` }} />
+          )}
+          {item.media_type === 'video' && (
+            <iframe
+              src={`${item.url}`}
+              className="image border"
+              allowFullScreen=""
+              frameBorder="0"
+              scrolling="no"
+              allow="autoplay"
+              title={item.title}
+            />
+          )}
         </div>
       </div>
     ));
