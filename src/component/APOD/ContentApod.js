@@ -6,6 +6,7 @@ import { getAPOD } from './../../actions/apod.js';
 
 import Load from './Loader';
 import ChoiceDateAPOD from './ChoiceDateAPOD';
+import GalleryAPOD from './GalleryAPOD';
 
 class ContentApod extends Component {
   componentDidMount() {
@@ -50,6 +51,7 @@ class ContentApod extends Component {
                 <ChoiceDateAPOD />
               </div>
             </div>
+            <GalleryAPOD />
           </div>
         )}
 

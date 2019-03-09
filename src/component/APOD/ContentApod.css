@@ -122,6 +122,36 @@
   padding: 8px 17px !important;
 }
 
+.gallery_apod {
+  width: 100%;
+  border: 1px solid red;
+}
+
+.cart_gallery {
+  border: 1px solid rgba(0, 123, 167, 1);
+  padding: 5px;
+  width: 25%;
+  position: relative;
+  color: lightgray;
+}
+
+.cart_gallery:hover .hover {
+  background-color: rgba(220,220,220,.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.img_apod_gallery {
+  height: 140px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+
 @media (max-width: 885px) {
   .choice_date{
     margin-top: 10px;
