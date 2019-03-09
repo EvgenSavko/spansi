@@ -11,6 +11,7 @@ class MainRouting extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/Mars" component={Mars} />
         </Switch>
+        <div className="margin_footer" style={{ height: '30px' }} />
       </main>
     );
   }

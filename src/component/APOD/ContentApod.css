@@ -121,3 +121,37 @@
   font-size: 14px !important;
   padding: 8px 17px !important;
 }
+
+@media (max-width: 885px) {
+  .choice_date{
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img_apod {
+    width: 100%;
+  }
+  .article_apod {
+    width: 100%;
+  }
+} 
+
+@media (max-width: 413px) {
+  .img_apod {
+    min-height: 230px;
+  }
+
+  .controleChoiceDate{
+    flex-wrap: wrap;
+  }
+  .datePicker{
+    width: 100%;
+  }
+  .row_btn_controle_APOD {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 37px;
+    width: 166px;
+  }
+}
