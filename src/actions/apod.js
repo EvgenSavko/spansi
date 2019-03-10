@@ -1,4 +1,4 @@
-import { ADD_APOD, PREV_APOD, NEXT_APOD } from '../constants';
+import { ADD_APOD, PREV_APOD, NEXT_APOD, SELECT_APOD } from '../constants';
 
 export function getAPOD(date) {
   return {
@@ -16,6 +16,13 @@ export function prevAPOD() {
 export function nextAPOD() {
   return {
     type: NEXT_APOD,
+  };
+}
+
+export function selectAPOD(dateChoice) {
+  return {
+    type: SELECT_APOD,
+    data: dateChoice,
   };
 }
 

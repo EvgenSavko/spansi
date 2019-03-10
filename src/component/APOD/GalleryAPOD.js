@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { selectAPOD } from '../../actions/apod.js';
+
 class GalleryAPOD extends Component {
+  callActionSelectAPOD(date) {
+    this.props.selectAPOD(date);
+  }
+
   renderCart() {
     const { apod } = this.props;
     return this.removeDuplicates(this.sortAPODByDate(apod), 'date').map((item, index) => (
-      <div className="cart_gallery" key={item.date + index++}>
+      <div
+        className="cart_gallery"
+        key={item.date + index++}
+        onClick={() => this.callActionSelectAPOD(item.date)}
+      >
         <div className="hover" />
         <h4 className="clip">{item.title}</h4>
         <h4>{item.date}</h4>
@@ -63,7 +73,7 @@ class GalleryAPOD extends Component {
       <div className="gallery_apod">
         {apod.length > 1 && (
           <div className="title_article">
-            <h3>Gallery</h3>
+            <h3>The gallery APOD is in chronological order</h3>
           </div>
         )}
         {apod.length > 1 && <div className="row">{this.renderCart()}</div>}
@@ -75,5 +85,5 @@ export default connect(
   state => ({
     apod: state.apod,
   }),
-  {}
+  { selectAPOD }
 )(GalleryAPOD);
