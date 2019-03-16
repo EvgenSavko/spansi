@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+
 import './Mars.css';
+
 import TitlePage from '../component/page-markup/TitlePage';
+import MarsRoverList from '../component/Mars/MarsRoverList';
 
 class Mars extends Component {
   state = {};
@@ -15,9 +18,10 @@ class Mars extends Component {
           <div />
         </div>
 
-        <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
+        <div className="content">
           <TitlePage name="Rovers on Mars" />
-          <p style={{ color: 'white' }}>Roveer</p>
+          <div style={{ marginTop: '15px' }} />
+          <MarsRoverList />
         </div>
       </div>
     );
