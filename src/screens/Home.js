@@ -16,7 +16,7 @@ class Home extends Component {
       setTimeout(() => {
         sessionStorage.setItem('first_loader', 'true');
         this.setState({ isShow: false });
-      }, 5000);
+      }, 2000);
     }
   }
 
@@ -28,7 +28,7 @@ class Home extends Component {
           <div />
         </div>
 
-        <div className="content" style={{ minHeight: this.state.minHeight + 'px' }}>
+        <div className="content">
           <TitlePage name="Astronomy Picture of the Day" />
           <div style={{ marginTop: '15px' }} />
           <ComponentAPOD />
