@@ -22,6 +22,7 @@
  rgba(70, 70, 70, 0.2) 10%, 
  rgba(48, 47, 47, 0) 100%);
  padding: 0 3px;
+ position: absolute;
 }
 .accordion .header_title h2{
   color: whitesmoke;
