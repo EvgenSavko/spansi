@@ -19,32 +19,26 @@ class Footer extends Component {
   };
 
   componentDidMount() {
-    console.log(document.location.pathname);
-    // let arr = [...this.state.arrLi];
-    let arrLi = this.state.arrLi.map(item => {
-      if (document.location.pathname.replace('/', '') === item.name) item.class = 'row li_active';
-      return item;
-    });
-    console.log(arrLi);
-    this.setState({ arrLi });
+    this.setActiveClass(document.location.pathname.replace('/', ''));
   }
 
   toggleClass = e => {
-    this.ul.childNodes.forEach((elem, index) => {
-      if (e.target.parentNode.className === 'row') {
-        e.target.parentNode.className = 'row li_active';
-        elem.childNodes[0].className = 'row';
-      } else if (!e.target.parentNode.className) {
-        if (index === 0) elem.childNodes[0].className = 'row li_active';
-        else elem.childNodes[0].className = 'row';
-      }
-    });
+    this.setActiveClass(e.target.parentNode.getAttribute('data-name'));
   };
+
+  setActiveClass(elem) {
+    let arrLi = this.state.arrLi.map(item => {
+      if (elem === item.name) item.class = 'row li_active';
+      else item.class = 'row';
+      return item;
+    });
+    this.setState({ arrLi });
+  }
 
   renderLi() {
     return this.state.arrLi.map(item => (
       <Link to={`/${item.name}`} key={item.name}>
-        <li className={`${item.class}`} data-name={`{item.name}`} onClick={this.toggleClass}>
+        <li className={`${item.class}`} data-name={`${item.name}`} onClick={this.toggleClass}>
           <h1 className={`${item.h1Class}`}>{item.name}</h1>
         </li>
       </Link>
@@ -52,7 +46,6 @@ class Footer extends Component {
   }
 
   render() {
-    // console.log(document.location.pathname);
     return (
       <footer className="block_footer ">
         <div className="body_footer">
@@ -61,24 +54,13 @@ class Footer extends Component {
           </Link>
           <ul
             className="ul_footer"
-            ref={element => {
-              this.ul = element;
-            }}
+            // ref={element => {
+            //   this.ul = element;
+            // }}
           >
-            {/* <Link to={`/APOD`}>
-              <li className="row li_active" data-name="APOD" onClick={this.toggleClass}>
-                <h1 className="insetshadow0">APOD</h1>
-              </li>
-            </Link>
-            <Link to={`/Mars`}>
-              <li className="row" data-name="MARS" onClick={this.toggleClass}>
-                <h1 className="insetshadow00">MARS</h1>
-              </li>
-            </Link> */}
             {this.renderLi()}
           </ul>
         </div>
-
         <div className="end_footer" />
       </footer>
     );
