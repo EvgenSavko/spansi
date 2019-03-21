@@ -7,3 +7,5 @@ export const PREV_APOD = 'PREV_APOD';
 export const NEXT_APOD = 'NEXT_APOD';
 
 export const SELECT_APOD = 'SELECT_APOD';
+
+export const ADD_MARS_ROVERS = 'ADD_MARS_ROVERS';

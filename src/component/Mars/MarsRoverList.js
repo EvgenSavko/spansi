@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import './MarsRoverList.css';
 
+import { getMarsRovers } from './../../actions/mars.js';
+
 class MarsRoverList extends Component {
+  componentDidMount() {
+    // const { apod } = this.props;
+    // console.log('apod.length', apod.length);
+    this.props.getMarsRovers();
+  }
+
   render() {
     return (
       <div className="mars_rover_list">
@@ -59,4 +68,9 @@ class MarsRoverList extends Component {
   }
 }
 
-export default MarsRoverList;
+export default connect(
+  state => ({
+    // apod: state.apod,
+  }),
+  { getMarsRovers }
+)(MarsRoverList);

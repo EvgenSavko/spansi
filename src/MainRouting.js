@@ -8,7 +8,8 @@ class MainRouting extends Component {
     return (
       <main>
         <Switch>
-          <Route exact path="/APOD" component={Home} />
+          <Route exact path="/" component={Home} />
+          <Route path="/APOD" component={Home} />
           <Route path="/Mars" component={Mars} />
         </Switch>
         <div className="margin_footer" style={{ height: '35px' }} />
