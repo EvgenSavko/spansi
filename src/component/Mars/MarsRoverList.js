@@ -7,9 +7,8 @@ import { getMarsRovers } from './../../actions/mars.js';
 
 class MarsRoverList extends Component {
   componentDidMount() {
-    // const { apod } = this.props;
-    // console.log('apod.length', apod.length);
-    this.props.getMarsRovers();
+    const { mars } = this.props;
+    if (mars.length < 1) this.props.getMarsRovers();
   }
 
   render() {
@@ -20,7 +19,10 @@ class MarsRoverList extends Component {
           <ul>
             <li
               tabIndex="1"
-              style={{ backgroundImage: 'url("http://michael-ferry.com/assets/accordion1.jpg")' }}
+              style={{
+                backgroundImage:
+                  'url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Mars_Spirit.jpg/800px-Mars_Spirit.jpg")',
+              }}
             >
               <div>
                 <div className="div_a">
@@ -29,10 +31,16 @@ class MarsRoverList extends Component {
                 </div>
               </div>
             </li>
-            <li tabIndex="2">
+            <li
+              tabIndex="2"
+              style={{
+                backgroundImage:
+                  'url("https://www.sciencenews.org/sites/default/files/2017/08/main/articles/080417_curiosity_selfie_free.jpg")',
+              }}
+            >
               <div>
                 <div className="header_title">
-                  <h2>Lorem Ipsum</h2>
+                  <h2>Lorem Ipsum2</h2>
                 </div>
                 <div className="div_a">
                   <h2>Lorem Ipsum</h2>
@@ -45,8 +53,16 @@ class MarsRoverList extends Component {
                 </div>
               </div>
             </li>
-            <li tabIndex="3">
+            <li
+              tabIndex="3"
+              style={{
+                backgroundImage: `url("${require('../../act/image/Mars_Spirit.jpg')}")`,
+              }}
+            >
               <div>
+                <div className="header_title">
+                  <h2>Lorem Mars_Spirit</h2>
+                </div>
                 <div className="div_a">
                   <h2>Lorem Ipsum</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -71,6 +87,7 @@ class MarsRoverList extends Component {
 export default connect(
   state => ({
     // apod: state.apod,
+    mars: state.mars,
   }),
   { getMarsRovers }
 )(MarsRoverList);
