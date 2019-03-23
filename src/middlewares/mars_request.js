@@ -3,15 +3,15 @@ import { ADD_MARS_ROVERS } from '../constants';
 const arrAddImg = [
   {
     name: 'Curiosity',
-    src: '/act/image/Mars_Curiosity.jpg',
+    src: 'act/image/Mars_Curiosity.jpg',
   },
   {
     name: 'Opportunity',
-    src: '/act/image/Mars_Opportunity.jpg',
+    src: 'act/image/Mars_Opportunity.jpg',
   },
   {
     name: 'Spirit',
-    src: '/act/image/Mars_Spirit.jpg',
+    src: 'act/image/Mars_Spirit.jpg',
   },
 ];
 
