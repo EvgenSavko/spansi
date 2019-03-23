@@ -16,10 +16,19 @@ class Footer extends Component {
         h1Class: 'insetshadow00',
       },
     ],
+    pathname: '',
   };
 
   componentDidMount() {
     this.setActiveClass(document.location.pathname.replace('/', ''));
+    this.setState({ pathname: document.location.pathname.replace('/', '') });
+  }
+
+  componentWillUpdate() {
+    if (this.state.pathname !== document.location.pathname.replace('/', '')) {
+      this.setActiveClass(document.location.pathname.replace('/', ''));
+      this.setState({ pathname: document.location.pathname.replace('/', '') });
+    }
   }
 
   toggleClass = e => {
@@ -49,8 +58,8 @@ class Footer extends Component {
     return (
       <footer className="block_footer ">
         <div className="body_footer">
-          <Link to="/">
-            <div className="logo" onClick={this.toggleClass} />
+          <Link to="/APOD">
+            <div className="logo" />
           </Link>
           <ul
             className="ul_footer"
