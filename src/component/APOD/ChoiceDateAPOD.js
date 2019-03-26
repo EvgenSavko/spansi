@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Button, Icon } from 'semantic-ui-react';
 import moment from 'moment';
 
-import { getAPOD, prevAPOD, nextAPOD } from './../../actions/apod.js';
+import { getAPOD, prevAPOD, nextAPOD } from './../../store/actions/apod';
 
 class ChoiceDateAPOD extends Component {
   maxDate = new Date();

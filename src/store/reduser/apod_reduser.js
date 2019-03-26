@@ -1,4 +1,4 @@
-import { ADD_APOD, PREV_APOD, NEXT_APOD, SELECT_APOD } from '../constants';
+import { ADD_APOD, PREV_APOD, NEXT_APOD, SELECT_APOD } from '../../constants';
 
 const initObject = {
   // date: '',

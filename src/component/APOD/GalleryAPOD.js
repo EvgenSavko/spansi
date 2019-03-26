@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { selectAPOD } from '../../actions/apod.js';
+import { selectAPOD } from './../../store/actions/apod';
 
 class GalleryAPOD extends Component {
   callActionSelectAPOD(date) {

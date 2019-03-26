@@ -1,4 +1,4 @@
-import { ADD_MARS_ROVERS } from '../constants';
+import { ADD_MARS_ROVERS } from '../../constants';
 
 const arrAddImg = [
   {

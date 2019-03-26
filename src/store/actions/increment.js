@@ -1,4 +1,4 @@
-import { INCREMENT } from '../constants';
+import { INCREMENT } from '../../constants';
 
 export function increment(amount) {
   return {

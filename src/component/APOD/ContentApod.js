@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import './ContentApod.css';
-import { getAPOD } from './../../actions/apod.js';
+import { getAPOD } from './../../store/actions/apod';
 
 import Load from './Loader';
 import ChoiceDateAPOD from './ChoiceDateAPOD';

@@ -1,4 +1,4 @@
-import { ADD_APOD } from '../constants';
+import { ADD_APOD } from '../../constants';
 
 export default store => next => action => {
   // console.log('action', action);

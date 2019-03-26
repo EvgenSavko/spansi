@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './MarsRoverList.css';
 
-import { getMarsRovers } from './../../actions/mars.js';
+import { getMarsRovers } from './../../store/actions/mars';
 
 class MarsRoverList extends Component {
   componentDidMount() {
@@ -39,7 +39,6 @@ class MarsRoverList extends Component {
   render() {
     return (
       <div className="mars_rover_list">
-        <h2>List rovers</h2>
         <div className="accordion">
           <ul>{this.renderLi()}</ul>
         </div>

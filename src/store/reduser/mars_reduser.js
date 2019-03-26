@@ -1,4 +1,4 @@
-import { ADD_MARS_ROVERS } from '../constants';
+import { ADD_MARS_ROVERS } from '../../constants';
 
 function mars_reduser(arr = [], action) {
   const { type, data } = action;
