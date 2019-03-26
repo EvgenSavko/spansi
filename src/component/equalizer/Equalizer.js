@@ -19,6 +19,8 @@ class Equalizer extends Component {
         <ReactAudioPlayer
           src={require('../../act/audio/God_Is_An_astronaut_Loss.ogg')}
           autoPlay
+          loop
+          volume={0.1}
           ref={element => {
             this.rap = element;
           }}
