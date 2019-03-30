@@ -26,6 +26,7 @@
 }
 .accordion .header_title h2{
   color: whitesmoke;
+  /* text-transform: uppercase; */
   /* position: relative;
   left: 3px; */
 }
@@ -90,9 +91,21 @@
   top: 16px;
 }
 .accordion ul li div .div_a p {
-  top: 16px;
+  /* top: 16px; */
   font-size: 13.5px;
 }
+
+.accordion ul li div .div_a .row {
+  display: flex;
+  justify-content: space-around;
+  line-height: 2px !important;
+}
+
+.accordion ul li div .div_a .row .col{
+  
+  width: 50%;
+}
+
 /* .accordion ul li:nth-child(1) {
   background-image: url("http://michael-ferry.com/assets/accordion1.jpg");
 } */
@@ -162,6 +175,24 @@
     -webkit-transition: none;
     transition: none;
   }
+
+  .accordion ul:hover li, .accordion ul:focus-within li {
+    width: 100%;
+  }
+
+  .accordion ul:hover li:hover,
+  .accordion ul li:focus, .accordion ul:focus-within li:focus {
+    width: 100%;
+  }
+
+  .accordion ul:hover li {
+    width: 100% !important;
+  }
+
+  .accordion ul:hover li:hover {
+    width: 100% !important;
+  }
+
 }
 .about {
   text-align: center;

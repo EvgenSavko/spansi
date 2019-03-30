@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './ContentApod.css';
 import { getAPOD } from './../../store/actions/apod';
 
-import Load from './Loader';
+import Load from '../Loader/Loader';
 import ChoiceDateAPOD from './ChoiceDateAPOD';
 import GalleryAPOD from './GalleryAPOD';
 
