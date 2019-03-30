@@ -90,6 +90,11 @@
   margin-bottom: 2px;
   top: 16px;
 }
+
+.accordion ul li div .div_a  .link_rover:hover {
+  color: #d49057;
+}
+
 .accordion ul li div .div_a p {
   /* top: 16px; */
   font-size: 13.5px;

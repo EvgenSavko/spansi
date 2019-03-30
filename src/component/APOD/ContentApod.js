@@ -11,12 +11,10 @@ import GalleryAPOD from './GalleryAPOD';
 class ContentApod extends Component {
   componentDidMount() {
     const { apod } = this.props;
-    console.log('apod.length', apod.length);
     if (apod.length === 1) this.props.getAPOD();
   }
 
   render() {
-    console.log('props', this.props);
     const { url, title, explanation, media_type } = this.props.apod[0];
     return (
       <div className="concent_apod" style={{ color: 'white' }}>

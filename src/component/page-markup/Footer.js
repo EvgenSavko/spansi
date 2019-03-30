@@ -36,8 +36,9 @@ class Footer extends Component {
   };
 
   setActiveClass(elem) {
+    const splitElem = elem.split('/')[0];
     let arrLi = this.state.arrLi.map(item => {
-      if (elem === item.name) item.class = 'row li_active';
+      if (splitElem === item.name) item.class = 'row li_active';
       else item.class = 'row';
       return item;
     });

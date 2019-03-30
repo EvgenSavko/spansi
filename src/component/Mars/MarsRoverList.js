@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import './MarsRoverList.css';
 import Load from '../Loader/Loader';
@@ -28,7 +29,9 @@ class MarsRoverList extends Component {
             <h2>{item.name}</h2>
           </div>
           <div className="div_a">
-            <h2>{item.name}</h2>
+            <Link to={`/MARS/${item.name}/`}>
+              <h2 className="link_rover">{item.name}</h2>
+            </Link>
             <div style={{ marginTop: '14px' }} />
             <div className="row">
               <div className="col">
@@ -55,7 +58,6 @@ class MarsRoverList extends Component {
                 <p>Max Sol: {item.max_sol}</p>
               </div>
             </div>
-
             <div style={{ marginTop: '14px' }} />
             <p>Cameras:</p>
             {this.listCamers(item.cameras)}
