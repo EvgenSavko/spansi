@@ -8,7 +8,7 @@ class RoverSingle extends Component {
       <div style={{ color: 'white' }}>
         <h1>{this.props.match.params.rover}</h1>
 
-        <Link to="/Mars/">
+        <Link to="/MARS/">
           <h3>Close</h3>
         </Link>
       </div>
