@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './Home.css';
-import TitlePage from '../component/page-markup/TitlePage';
+import { TitlePage } from '../component/page-markup';
 import ComponentAPOD from '../component/APOD/ContentApod';
 
 class Home extends Component {

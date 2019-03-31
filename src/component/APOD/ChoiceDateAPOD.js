@@ -81,7 +81,7 @@ class ChoiceDateAPOD extends Component {
               <Icon name="arrow right" />
             </Button.Content>
           </Button>
-          <label className="label_controle_APOD">switch date APOD</label>
+          <label className="label_controle_APOD">switch date chronology</label>
         </div>
       </div>
     );

@@ -168,6 +168,12 @@
   }
 } 
 
+@media (max-width: 550px) {
+  .cart_gallery {
+    width: 33.3%;
+  }
+}
+
 @media (max-width: 413px) {
   .img_apod {
     min-height: 230px;
@@ -184,5 +190,9 @@
     margin-bottom: 10px;
     height: 37px;
     width: 166px;
+  }
+
+  .cart_gallery {
+    width: 50%;
   }
 }

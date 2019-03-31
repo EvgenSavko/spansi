@@ -115,4 +115,16 @@
   }
 }
 
+@media (max-width: 540px) {
+  #title span {
+   font-size: 34px;
+  }
+} 
+
+@media (max-width: 422px) {
+  #title span {
+   font-size: 21px;
+  }
+} 
+
 /* FIRST LOADER END */

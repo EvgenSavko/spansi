@@ -3,9 +3,9 @@ import { Switch, Route } from 'react-router-dom';
 
 import './Mars.css';
 
-import TitlePage from '../component/page-markup/TitlePage';
+import { TitlePage } from '../component/page-markup';
 import MarsRoverList from '../component/Mars/MarsRoverList';
-import RoverSingle from './RoverSingle';
+import RoverSingle from '../component/Mars/RoverSingle';
 
 class Mars extends Component {
   state = {};
