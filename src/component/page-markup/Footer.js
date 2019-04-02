@@ -36,7 +36,7 @@ class Footer extends Component {
   };
 
   setActiveClass(elem) {
-    const splitElem = elem.split('/')[0];
+    const splitElem = elem.split('/')[0] === '' ? 'APOD' : elem.split('/')[0];
     let arrLi = this.state.arrLi.map(item => {
       if (splitElem === item.name) item.class = 'row li_active';
       else item.class = 'row';
@@ -47,7 +47,7 @@ class Footer extends Component {
 
   renderLi() {
     return this.state.arrLi.map(item => (
-      <Link to={`/${item.name}`} key={item.name}>
+      <Link to={`/${item.name === 'APOD' ? '' : item.name}`} key={item.name}>
         <li className={`${item.class}`} data-name={`${item.name}`} onClick={this.toggleClass}>
           <h1 className={`${item.h1Class}`}>{item.name}</h1>
         </li>
@@ -59,7 +59,7 @@ class Footer extends Component {
     return (
       <footer className="block_footer ">
         <div className="body_footer">
-          <Link to="/APOD">
+          <Link to="/">
             <div className="logo" />
           </Link>
           <ul

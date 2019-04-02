@@ -10,7 +10,7 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    this.props.history.push('/APOD');
+    // this.props.history.push('/APOD');
     if (sessionStorage.getItem('first_loader') === 'true') {
       this.setState({ isShow: false });
     } else {

@@ -4,7 +4,7 @@ import './Equalizer.css';
 
 class Equalizer extends Component {
   state = {
-    isPlay: true,
+    isPlay: false,
   };
 
   togglePlay = () => {
@@ -18,7 +18,7 @@ class Equalizer extends Component {
       <div>
         <ReactAudioPlayer
           src={require('../../act/audio/God_Is_An_astronaut_Loss.ogg')}
-          autoPlay
+          // autoPlay
           volume={0.3}
           ref={element => {
             this.rap = element;

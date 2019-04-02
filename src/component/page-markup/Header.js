@@ -27,7 +27,7 @@ class Header extends Component {
         <div className="content">
           <div className="row">
             <div className="left">
-              <Link to={`/APOD`}>
+              <Link to={`/`}>
                 <h5>SPANSI</h5>
               </Link>
             </div>
