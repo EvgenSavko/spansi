@@ -12,7 +12,21 @@ class ContentApod extends Component {
   componentDidMount() {
     const { apod } = this.props;
     if (apod.length === 1) this.props.getAPOD();
+
+    this.callBackendAPI()
+      .then(res => console.log('node bekend', res.express))
+      .catch(err => console.log(err));
   }
+
+  callBackendAPI = async () => {
+    const response = await fetch('/express_backend');
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message);
+    }
+    return body;
+  };
 
   render() {
     const { url, title, explanation, media_type } = this.props.apod[0];
