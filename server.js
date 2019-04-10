@@ -19,6 +19,6 @@ app.get('*', (req, res) => {
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // create a GET route
-app.get('/express_backend', (req, res) => {
+app.get('/express_backend', async (req, res) => {
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT !!!177' });
 });
