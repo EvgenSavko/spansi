@@ -4,14 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-=======
-    "start": "node server.js"
-},
->>>>>>> 597260d466b75c719e8b7a31c2535cf1d4b4f782
   "repository": {
     "type": "git",
     "url": "git+https://github.com/senyaq/spansi.git"
