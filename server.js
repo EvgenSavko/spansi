@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
+const path = require('path');
 
 if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
@@ -18,5 +19,9 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // create a GET route
 app.get('/express_backend', (req, res) => {
+<<<<<<< HEAD
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT !!1!77' });
+=======
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT !!!177' });
+>>>>>>> 5814554afcaa4238b58f604443c8f69bc8342194
 });
