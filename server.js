@@ -4,21 +4,14 @@ const port = process.env.PORT || 5000;
 const path = require('path');
 
 if (process.env.NODE_ENV === 'production') {
-//   // Exprees will serve up production assets
-//   app.use(express.static('react_project/build'));
+  // Exprees will serve up production assets
+  app.use(express.static('react_project/build'));
 
-//   // Express serve up index.html file if it doesn't recognize route
-//   const path = require('path');
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'react_project', 'build', 'index.html'));
-//   });
-  
-  // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'react_project/build')));
-  // match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/react_project/build/index.html'));
-});
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'react_project', 'build', 'index.html'));
+  });
 }
 
 // console.log that your server is up and running
