@@ -6,8 +6,8 @@ const port = process.env.PORT || 5000;
 if (process.env.NODE_ENV === 'production') {
   const path = require('path');
   // Exprees will serve up production assets
-  // app.use(express.static('react_project/build'));
-  app.use(express.static(path.join(__dirname, 'resact_project/build')));
+  app.use(express.static('react_project/build'));
+//   app.use(express.static(path.join(__dirname, 'resact_project/build')));
 
   // Express serve up index.html file if it doesn't recognize route
 
