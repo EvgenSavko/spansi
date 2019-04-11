@@ -8,7 +8,6 @@
     "build": "webpack"
 },
 "heroku-run-build-script": true,
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/senyaq/spansi.git"
