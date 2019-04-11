@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "heroku-prebuild": "rm -rf $(npm config get cache); mv ../.npmcache $(npm config get cache) || echo No cache",
-     "heroku-postbuild": "cd react_project && npm install && npm run build"
+     "heroku-postbuild": "cd react_project && npm install && npm run build",
+    "installAndCompile": "npm install && npm run compile",
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,5 @@
     "node": "10.15.3",
     "npm": "6.4.1"
   },
-  "cacheDirectories": [
-    "../.npmcache"
-  ],
+"cacheDirectories": ["react_project/node_modules", "/node_modules"],
 }
