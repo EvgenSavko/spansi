@@ -14,7 +14,7 @@ class ContentApod extends Component {
     if (apod.length === 1) this.props.getAPOD();
 
     this.callBackendAPI()
-      .then(res => console.log('node bekend', res.express))
+      .then(res => console.log('node bekend', res))
       .catch(err => console.log(err));
   }
 
