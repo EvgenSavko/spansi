@@ -2,12 +2,11 @@
   "name": "spansi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": " node server.js",
-    "heroku-prebuild": "cd react_project && npm install --only=dev && npm install && npm run build",
-    "heroku-postbuild": "node server.js"
+    "heroku-postbuild": "cd react_project && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
