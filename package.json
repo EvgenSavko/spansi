@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && node server.js",
-    "heroku-postbuild": "cd react_project && npm install --only=dev && npm install && npm run build"
+    "start": " node server.js",
+    "heroku-postbuild": "npm install | cd react_project && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
