@@ -1,14 +1,13 @@
-const bodyParser = require('body-parser');
-const setUpConnection = require('./utils/DataBaseUtils.js');
-const listNotes = require('./utils/DataBaseUtils.js');
-const createNote = require('./utils/DataBaseUtils.js');
-const deleteNotes = require('./utils/DataBaseUtils.js');
+import bodyParser from 'body-parser';
+import * as db from './utils/DataBaseUtils';
+// const listNotes = require('./utils/DataBaseUtils.js');
+// const createNote = require('./utils/DataBaseUtils.js');
+// const deleteNotes = require('./utils/DataBaseUtils.js');
 const express = require('express');
 const path = require('path');
-
-setUpConnection();
-
 const app = express();
+
+db.setUpConnection();
 
 app.use(bodyParser.json());
 
@@ -24,16 +23,19 @@ app.get('/express_backend', (req, res) => {
 });
 
 app.get('/notes', (req, res) => {
-  listNotes().then(data => res.send(data));
-  console.log(`Sentpasswords`);
+  console.log(`db`, db);
+  db.listNotes().then(data => {
+    console.log(`data`, data);
+    res.send(data);
+  });
 });
 
 app.post('/notes', (req, res) => {
-  createNote(req.body).then(data => res.send(data));
+  db.createNote(req.body).then(data => res.send(data));
 });
 
 app.delete('/notes/:id', (req, res) => {
-  deleteNotes(req.params.id).then(data => res.send(data));
+  db.deleteNotes(req.params.id).then(data => res.send(data));
 });
 
 // The "catchall" handler: for any request that doesn't

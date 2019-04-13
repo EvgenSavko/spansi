@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -11,5 +11,4 @@ const NoteSchema = new Schema({
   phone: { type: String },
 });
 
-const Note = mongoose.model('Note', NoteSchema);
-module.exports = Note;
+mongoose.model('Note', NoteSchema);

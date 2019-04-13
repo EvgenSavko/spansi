@@ -1,18 +1,20 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-require('../models/Node');
+import '../models/Note';
 
 const Note = mongoose.model('Note');
 
-module.exports = function setUpConnection() {
-  mongoose.connect('mongodb://localhost/notes');
-};
+export function setUpConnection() {
+  console.log(`setUpConnection`);
+  mongoose.connect('mongodb://localhost/notes', { useNewUrlParser: true });
+}
 
-module.exports = function listNotes() {
+export function listNotes() {
+  console.log(`listNotes2`);
   return Note.find();
-};
+}
 
-module.exports = function createNote(data) {
+export function createNote(data) {
   const note = new Note({
     name: data.name,
     password: data.password,
@@ -22,8 +24,8 @@ module.exports = function createNote(data) {
     phone: data.phone,
   });
   return note.save();
-};
+}
 
-module.exports = function deleteNotes(id) {
+export function deleteNotes(id) {
   return Note.findById(id).remove();
-};
+}
