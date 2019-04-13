@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'react_project/build')));
 
 // Put all API endpoints under '/api'
 app.get('/express_backend', (req, res) => {
-  const count = {text: 'bakend massage'};
+  const count = { text: 'bakend massage' };
 
   // Return them as json
   res.json(count);
