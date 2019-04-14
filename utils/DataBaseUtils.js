@@ -6,7 +6,7 @@ const Note = mongoose.model('Note');
 
 export function setUpConnection() {
   console.log(`setUpConnection`);
-  mongoose.connect('mongodb://localhost/notes', { useNewUrlParser: true });
+  mongoose.connect('mongodb://localhost:27017/notes', { useNewUrlParser: true });
 }
 
 export function listNotes() {
@@ -15,6 +15,7 @@ export function listNotes() {
 }
 
 export function createNote(data) {
+  console.log('createNote', data);
   const note = new Note({
     name: data.name,
     password: data.password,

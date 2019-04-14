@@ -26,16 +26,17 @@ app.get('/notes', (req, res) => {
   console.log(`db`, db);
   db.listNotes().then(data => {
     console.log(`data`, data);
-    res.send(data);
+    res.json(data);
   });
 });
 
 app.post('/notes', (req, res) => {
-  db.createNote(req.body).then(data => res.send(data));
+  console.log('req.body', req.body);
+  db.createNote(req.body).then(data => res.json(data));
 });
 
 app.delete('/notes/:id', (req, res) => {
-  db.deleteNotes(req.params.id).then(data => res.send(data));
+  db.deleteNotes(req.params.id).then(data => res.json(data));
 });
 
 // The "catchall" handler: for any request that doesn't
@@ -44,7 +45,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/react_project/build/index.html'));
 });
 
-const port = process.env.PORT || 27017;
+const port = process.env.PORT || 5000;
 app.listen(port);
 
 console.log(`Password generator listening on ${port}`);
