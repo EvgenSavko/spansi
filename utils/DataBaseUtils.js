@@ -6,7 +6,13 @@ const Note = mongoose.model('Note');
 
 export function setUpConnection() {
   console.log(`setUpConnection`);
-  mongoose.connect('mongodb://localhost:27017/notes', { useNewUrlParser: true });
+  // mongoose.connect('mongodb://localhost:27017/notes', { useNewUrlParser: true });
+  mongoose.connect(
+    'mongodb+srv://evgen:486279153@cluster0-zjudz.mongodb.net/notes?retryWrites=true',
+    {
+      useNewUrlParser: true,
+    }
+  );
 }
 
 export function listNotes() {
