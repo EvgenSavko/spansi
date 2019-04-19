@@ -8,7 +8,7 @@ export function setUpConnection() {
   console.log(`setUpConnection`);
   // mongoose.connect('mongodb://localhost:27017/notes', { useNewUrlParser: true });
   mongoose.connect(
-    process.env.MONGODB_URI ||
+    process.env.MONGOLAB_URI ||
       'mongodb+srv://evgen:486279153@cluster0-zjudz.mongodb.net/notes?retryWrites=true',
     {
       useNewUrlParser: true,
