@@ -9,7 +9,7 @@ export function setUpConnection() {
   // mongoose.connect('mongodb://localhost:27017/notes', { useNewUrlParser: true });
   mongoose.connect(
     process.env.MONGOLAB_URI ||
-      'mongodb+srv://evgen:486279153@cluster0-zjudz.mongodb.net/notes?retryWrites=true',
+      'mongodb+srv://evgen:486279153@cluster0-zjudz.mongodb.net/notes?ssl=true&retryWrites=true&authSource=admin',
     {
       useNewUrlParser: true,
     }
