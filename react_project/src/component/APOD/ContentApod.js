@@ -5,6 +5,7 @@ import './ContentApod.css';
 import { getAPOD } from './../../store/actions/apod';
 
 import Load from '../Loader/Loader';
+import DataPicker from './DataPicker';
 import ChoiceDateAPOD from './ChoiceDateAPOD';
 import GalleryAPOD from './GalleryAPOD';
 
@@ -30,6 +31,7 @@ class ContentApod extends Component {
 
   render() {
     const { url, title, explanation, media_type } = this.props.apod[0];
+    console.log('split data picker');
     return (
       <div className="concent_apod" style={{ color: 'white' }}>
         {!url && <Load />}
@@ -60,7 +62,10 @@ class ContentApod extends Component {
                 <p>{explanation}</p>
               </div>
               <div className="choice_date">
-                <ChoiceDateAPOD />
+                <div className="controleChoiceDate">
+                  <DataPicker />
+                  <ChoiceDateAPOD />
+                </div>
               </div>
             </div>
             <GalleryAPOD />
