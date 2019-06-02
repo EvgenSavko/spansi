@@ -87,13 +87,22 @@
 
 .datePicker {
   position: relative;
-  width: 180px;
+  width: 226px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.datePicker > button {
+  height: 31px;
+  font-size: 15px !important;
+  padding: 8px !important;
 }
 
 .add_icon{
  position: absolute;
  top: 14px;
- left: 133px;
+ left: 172px;
  color: rgb(224, 224, 224) !important;
  z-index: -1;
 }
@@ -131,7 +140,7 @@
 .cart_gallery {
   /* border: 1px solid rgba(0, 123, 167, 1); */
   padding: 5px;
-  width: 25%;
+  width: 20%;
   position: relative;
   color: lightgray;
 }
@@ -150,6 +159,12 @@
   height: 140px;
   width: 100%;
   margin-top: 4px;
+}
+
+@media (max-width: 1450px) {
+  .cart_gallery {
+    width: 25%;
+  }
 }
 
 

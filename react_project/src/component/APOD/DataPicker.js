@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { MdPlaylistAdd } from 'react-icons/md';
 import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { Button, Segment } from 'semantic-ui-react'
 import moment from 'moment';
 
 import { getAPOD } from './../../store/actions/apod';
@@ -28,6 +29,9 @@ class DataPicker extends Component {
   render() {
     return (
       <div className="datePicker">
+        <Button size='mini' basic inverted color='blue'>
+          {'<'}
+        </Button>
         <MuiThemeProvider>
           <DatePicker
             className="dataPickerAPOD"
@@ -41,6 +45,9 @@ class DataPicker extends Component {
           />
         </MuiThemeProvider>
         <MdPlaylistAdd size="1.5rem" className="add_icon" />
+        <Button size='mini' basic inverted color='blue'>
+          {'>'}
+        </Button>
       </div>
     );
   }

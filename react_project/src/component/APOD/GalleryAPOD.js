@@ -4,9 +4,13 @@ import { connect } from 'react-redux';
 import { selectAPOD } from './../../store/actions/apod';
 
 class GalleryAPOD extends Component {
+
   callActionSelectAPOD(date) {
     this.props.selectAPOD(date);
   }
+
+  // TODO:  
+  // * example
 
   renderCart() {
     const { apod } = this.props;
