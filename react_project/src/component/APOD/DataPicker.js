@@ -30,15 +30,16 @@ class DataPicker extends Component {
 
   getPrevDay(){
     let date = this.selectDate ? this.selectDate : new Date();
-    this.selectDate =  moment(date).subtract('days', 1);
-    let formatDate = moment(date).subtract('days', 1).format('YYYY-MM-DD')
+    this.selectDate =  moment(date).subtract(1, 'days');
+    let formatDate = moment(date).subtract(1, 'days').format('YYYY-MM-DD')
     this.props.getAPOD(formatDate);
   }
 
   getNextDay(){
     let date = this.selectDate ? this.selectDate : new Date();
-    this.selectDate =  moment(date).subtract('days', 1);
-    let formatDate = moment(date).subtract('days', 1).format('YYYY-MM-DD')
+    this.selectDate =  moment(date).add(1, 'days');
+    let formatDate = moment(date).add(1, 'days').format('YYYY-MM-DD')
+    console.log(formatDate)
     this.props.getAPOD(formatDate);
   }
 
