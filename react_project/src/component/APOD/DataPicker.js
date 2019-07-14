@@ -12,10 +12,10 @@ import { getAPOD } from './../../store/actions/apod';
 class DataPicker extends Component {
   maxDate = new Date();
   minDate = new Date(1996, 1, 1);
-  // selectDate = null;
+  selectDate = null;
 
   onGetDate(event, date) {
-    // this.selectDate = date;
+    this.selectDate = date;
     console.log('date', moment(date).format('YYYY-MM-DD')); //whatever the date the user picked
     let formatDate = moment(date).format('YYYY-MM-DD');
     console.log(formatDate);
@@ -28,19 +28,19 @@ class DataPicker extends Component {
     else return null;
   }
 
-  // getPrevDay(){
-  //   let date = this.selectDate ? this.selectDate : new Date();
-  //   this.selectDate =  moment(date).subtract('days', 1);
-  //   let formatDate = moment(date).subtract('days', 1).format('YYYY-MM-DD')
-  //   this.props.getAPOD(formatDate);
-  // }
+  getPrevDay(){
+    let date = this.selectDate ? this.selectDate : new Date();
+    this.selectDate =  moment(date).subtract('days', 1);
+    let formatDate = moment(date).subtract('days', 1).format('YYYY-MM-DD')
+    this.props.getAPOD(formatDate);
+  }
 
-  // getNextDay(){
-  //   let date = this.selectDate ? this.selectDate : new Date();
-  //   this.selectDate =  moment(date).subtract('days', 1);
-  //   let formatDate = moment(date).subtract('days', 1).format('YYYY-MM-DD')
-  //   this.props.getAPOD(formatDate);
-  // }
+  getNextDay(){
+    let date = this.selectDate ? this.selectDate : new Date();
+    this.selectDate =  moment(date).subtract('days', 1);
+    let formatDate = moment(date).subtract('days', 1).format('YYYY-MM-DD')
+    this.props.getAPOD(formatDate);
+  }
 
   render() {
     return (
