@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import MainRouting from './MainRouting';
-import { Header, Footer } from './component/page-markup';
-import './App.css';
+import React, { Component } from 'react'
+import MainRouting from './MainRouting'
+import { Header, Footer } from './component/page-markup'
+import './App.css'
 
 class App extends Component {
   render() {
@@ -11,8 +11,8 @@ class App extends Component {
         <MainRouting />
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

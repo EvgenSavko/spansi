@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Home from './screens/Home';
-import Mars from './screens/Mars';
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Home from './screens/Home'
+import Mars from './screens/Mars'
 
 class MainRouting extends Component {
   render() {
@@ -14,8 +14,8 @@ class MainRouting extends Component {
         </Switch>
         <div className="margin_footer" style={{ height: '35px' }} />
       </main>
-    );
+    )
   }
 }
 
-export default MainRouting;
+export default MainRouting

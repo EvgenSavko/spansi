@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-import './MarsRoverList.css';
-import Load from '../Loader/Loader';
+import './MarsRoverList.css'
+import Load from '../Loader/Loader'
 
-import { getMarsRovers } from './../../store/actions/mars';
+import { getMarsRovers } from './../../store/actions/mars'
 
 class MarsRoverList extends Component {
   componentDidMount() {
-    const { mars } = this.props;
-    if (mars.length < 1) this.props.getMarsRovers();
+    const { mars } = this.props
+    if (mars.length < 1) this.props.getMarsRovers()
   }
 
   renderLi() {
-    const { mars } = this.props;
+    const { mars } = this.props
     return mars.map((item, index) => (
       <li
         key={item.name}
         tabIndex={index + 1}
         style={{
-          backgroundImage: `url(${require('../../' +
-            (item.src ? item.src : 'act/image/not_photo.jpg'))})`,
+          backgroundImage: `url(${require('../../' + (item.src ? item.src : 'act/image/not_photo.jpg'))})`,
         }}
       >
         <div>
@@ -64,7 +63,7 @@ class MarsRoverList extends Component {
           </div>
         </div>
       </li>
-    ));
+    ))
   }
 
   listCamers(arr) {
@@ -74,11 +73,11 @@ class MarsRoverList extends Component {
           <p>{cam.full_name}</p>
         </div>
       </div>
-    ));
+    ))
   }
 
   render() {
-    const { mars } = this.props;
+    const { mars } = this.props
     return (
       <div>
         {mars.length === 0 && <Load />}
@@ -90,7 +89,7 @@ class MarsRoverList extends Component {
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 
@@ -100,4 +99,4 @@ export default connect(
     mars: state.mars,
   }),
   { getMarsRovers }
-)(MarsRoverList);
+)(MarsRoverList)

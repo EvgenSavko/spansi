@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import './Footer.css'
 
 class Footer extends Component {
   state = {
@@ -17,32 +17,32 @@ class Footer extends Component {
       },
     ],
     pathname: '',
-  };
+  }
 
   componentDidMount() {
-    this.setActiveClass(document.location.pathname.replace('/', ''));
-    this.setState({ pathname: document.location.pathname.replace('/', '') });
+    this.setActiveClass(document.location.pathname.replace('/', ''))
+    this.setState({ pathname: document.location.pathname.replace('/', '') })
   }
 
   componentWillUpdate() {
     if (this.state.pathname !== document.location.pathname.replace('/', '')) {
-      this.setActiveClass(document.location.pathname.replace('/', ''));
-      this.setState({ pathname: document.location.pathname.replace('/', '') });
+      this.setActiveClass(document.location.pathname.replace('/', ''))
+      this.setState({ pathname: document.location.pathname.replace('/', '') })
     }
   }
 
   toggleClass = e => {
-    this.setActiveClass(e.target.parentNode.getAttribute('data-name'));
-  };
+    this.setActiveClass(e.target.parentNode.getAttribute('data-name'))
+  }
 
   setActiveClass(elem) {
-    const splitElem = elem.split('/')[0] === '' ? 'APOD' : elem.split('/')[0];
+    const splitElem = elem.split('/')[0] === '' ? 'APOD' : elem.split('/')[0]
     let arrLi = this.state.arrLi.map(item => {
-      if (splitElem === item.name) item.class = 'row li_active';
-      else item.class = 'row';
-      return item;
-    });
-    this.setState({ arrLi });
+      if (splitElem === item.name) item.class = 'row li_active'
+      else item.class = 'row'
+      return item
+    })
+    this.setState({ arrLi })
   }
 
   renderLi() {
@@ -52,7 +52,7 @@ class Footer extends Component {
           <h1 className={`${item.h1Class}`}>{item.name}</h1>
         </li>
       </Link>
-    ));
+    ))
   }
 
   render() {
@@ -73,8 +73,8 @@ class Footer extends Component {
         </div>
         <div className="end_footer" />
       </footer>
-    );
+    )
   }
 }
 
-export default Footer;
+export default Footer

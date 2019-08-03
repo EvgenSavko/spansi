@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import './Header.css';
+import './Header.css'
 
-import Equalizer from '../equalizer/Equalizer';
-import Clock from '../clock/Clock';
+import Equalizer from '../equalizer/Equalizer'
+import Clock from '../clock/Clock'
 
 class Header extends Component {
   componentDidMount() {
     this.callBackendAPIMongo()
       .then(res => console.log('node bekend callBackendAPIMongo', res))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   }
 
   postTest = async () => {
@@ -21,8 +21,8 @@ class Header extends Component {
       first_name: 'Joy',
       second_name: 'Boy',
       phone: '911',
-    };
-    console.log(obj);
+    }
+    console.log(obj)
     fetch('/notes', {
       method: 'POST',
       body: JSON.stringify(obj),
@@ -31,33 +31,33 @@ class Header extends Component {
         'Content-Type': 'application/json',
         'Access-Control-Origin': '*',
       },
-    }).catch(err => console.log(err));
-  };
+    }).catch(err => console.log(err))
+  }
 
   callBackendAPIMongo = async () => {
-    const response = await fetch('/notes');
-    const body = await response.json();
+    const response = await fetch('/notes')
+    const body = await response.json()
     if (response.status !== 200) {
-      throw Error(body.message);
+      throw Error(body.message)
     }
-    return body;
-  };
+    return body
+  }
 
   resize() {
     window.addEventListener('scroll', () => {
-      let scrollHeight = document.documentElement.scrollTop;
-      if (scrollHeight > 20) this.head.classList.add('scroll_down');
-      else this.head.classList.remove('scroll_down');
-    });
+      let scrollHeight = document.documentElement.scrollTop
+      if (scrollHeight > 20) this.head.classList.add('scroll_down')
+      else this.head.classList.remove('scroll_down')
+    })
   }
 
   render() {
-    this.resize();
+    this.resize()
     return (
       <header
         className="block_header"
         ref={element => {
-          this.head = element;
+          this.head = element
         }}
       >
         <div className="content">
@@ -74,7 +74,7 @@ class Header extends Component {
               <div>
                 <h5
                   onClick={() => {
-                    this.postTest();
+                    this.postTest()
                   }}
                 >
                   About
@@ -92,8 +92,8 @@ class Header extends Component {
           </div>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header

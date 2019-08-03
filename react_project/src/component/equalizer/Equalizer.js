@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import ReactAudioPlayer from 'react-audio-player';
-import './Equalizer.css';
+import React, { Component } from 'react'
+import ReactAudioPlayer from 'react-audio-player'
+import './Equalizer.css'
 
 class Equalizer extends Component {
   state = {
     isPlay: false,
-  };
+  }
 
   togglePlay = () => {
-    console.log(this.rap.audioEl.play());
-    this.setState({ isPlay: !this.state.isPlay });
-    this.state.isPlay ? this.rap.audioEl.pause() : this.rap.audioEl.play();
-  };
+    console.log(this.rap.audioEl.play())
+    this.setState({ isPlay: !this.state.isPlay })
+    this.state.isPlay ? this.rap.audioEl.pause() : this.rap.audioEl.play()
+  }
 
   render() {
     return (
@@ -21,21 +21,18 @@ class Equalizer extends Component {
           // autoPlay
           volume={0.3}
           ref={element => {
-            this.rap = element;
+            this.rap = element
           }}
         />
-        <div
-          className={this.state.isPlay ? 'equalizer' : 'equalizer_off'}
-          onClick={this.togglePlay}
-        >
+        <div className={this.state.isPlay ? 'equalizer' : 'equalizer_off'} onClick={this.togglePlay}>
           <span className="eq1" />
           <span className="eq2" />
           <span className="eq3" />
           <span className="eq4" />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Equalizer;
+export default Equalizer

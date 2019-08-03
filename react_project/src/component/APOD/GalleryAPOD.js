@@ -1,32 +1,25 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import { selectAPOD } from './../../store/actions/apod';
+import { selectAPOD } from './../../store/actions/apod'
 
 class GalleryAPOD extends Component {
-
   callActionSelectAPOD(date) {
-    this.props.selectAPOD(date);
+    this.props.selectAPOD(date)
   }
 
-  // TODO:  
+  // TODO:
   // * example
 
   renderCart() {
-    const { apod } = this.props;
+    const { apod } = this.props
     return this.removeDuplicates(this.sortAPODByDate(apod), 'date').map((item, index) => (
-      <div
-        className="cart_gallery"
-        key={item.date + index++}
-        onClick={() => this.callActionSelectAPOD(item.date)}
-      >
+      <div className="cart_gallery" key={item.date + index++} onClick={() => this.callActionSelectAPOD(item.date)}>
         <div className="hover" />
         <h4 className="clip">{item.title}</h4>
         <h4>{item.date}</h4>
         <div className="img_apod_gallery">
-          {item.media_type === 'image' && (
-            <div className="image border" style={{ backgroundImage: `url(${item.url})` }} />
-          )}
+          {item.media_type === 'image' && <div className="image border" style={{ backgroundImage: `url(${item.url})` }} />}
           {item.media_type === 'video' && (
             <iframe
               src={`${item.url}`}
@@ -40,39 +33,39 @@ class GalleryAPOD extends Component {
           )}
         </div>
       </div>
-    ));
+    ))
   }
 
   sortAPODByDate(arr) {
-    const newArr = [...arr];
+    const newArr = [...arr]
     return newArr.sort(function(a, b) {
       let c = a.date,
-        d = b.date;
+        d = b.date
       if (c < d) {
-        return -1;
+        return -1
       } else if (c > d) {
-        return 1;
+        return 1
       }
-      return 0;
-    });
+      return 0
+    })
   }
 
   removeDuplicates(originalArray, prop) {
-    var newArray = [];
-    var lookupObject = {};
+    var newArray = []
+    var lookupObject = {}
 
     for (var i in originalArray) {
-      lookupObject[originalArray[i][prop]] = originalArray[i];
+      lookupObject[originalArray[i][prop]] = originalArray[i]
     }
 
     for (i in lookupObject) {
-      newArray.push(lookupObject[i]);
+      newArray.push(lookupObject[i])
     }
-    return newArray;
+    return newArray
   }
 
   render() {
-    const { apod } = this.props;
+    const { apod } = this.props
     return (
       <div className="gallery_apod">
         {apod.length > 1 && (
@@ -82,7 +75,7 @@ class GalleryAPOD extends Component {
         )}
         {apod.length > 1 && <div className="row">{this.renderCart()}</div>}
       </div>
-    );
+    )
   }
 }
 export default connect(
@@ -90,4 +83,4 @@ export default connect(
     apod: state.apod,
   }),
   { selectAPOD }
-)(GalleryAPOD);
+)(GalleryAPOD)

@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-import './Mars.css';
+import './Mars.css'
 
-import { TitlePage } from '../component/page-markup';
-import MarsRoverList from '../component/Mars/MarsRoverList';
-import RoverSingle from '../component/Mars/RoverSingle';
+import { TitlePage } from '../component/page-markup'
+import MarsRoverList from '../component/Mars/MarsRoverList'
+import RoverSingle from '../component/Mars/RoverSingle'
 
 class Mars extends Component {
-  state = {};
+  state = {}
 
   componentDidMount() {}
 
@@ -29,8 +29,8 @@ class Mars extends Component {
           </Switch>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Mars;
+export default Mars

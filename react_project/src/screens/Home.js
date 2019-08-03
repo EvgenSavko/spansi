@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import './Home.css';
-import { TitlePage } from '../component/page-markup';
-import ComponentAPOD from '../component/APOD/ContentApod';
+import './Home.css'
+import { TitlePage } from '../component/page-markup'
+import ComponentAPOD from '../component/APOD/ContentApod'
 
 class Home extends Component {
   state = {
     isShow: true,
-  };
+  }
 
   componentDidMount() {
     // this.props.history.push('/APOD');
     if (sessionStorage.getItem('first_loader') === 'true') {
-      this.setState({ isShow: false });
+      this.setState({ isShow: false })
     } else {
       setTimeout(() => {
-        sessionStorage.setItem('first_loader', 'true');
-        this.setState({ isShow: false });
-      }, 2000);
+        sessionStorage.setItem('first_loader', 'true')
+        this.setState({ isShow: false })
+      }, 2000)
     }
   }
 
@@ -50,8 +50,8 @@ class Home extends Component {
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home

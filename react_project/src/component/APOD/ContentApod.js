@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import './ContentApod.css';
-import { getAPOD } from './../../store/actions/apod';
+import './ContentApod.css'
+import { getAPOD } from './../../store/actions/apod'
 
-import Load from '../Loader/Loader';
-import DataPicker from './DataPicker';
-import ChoiceDateAPOD from './ChoiceDateAPOD';
-import GalleryAPOD from './GalleryAPOD';
+import Load from '../Loader/Loader'
+import DataPicker from './DataPicker'
+import ChoiceDateAPOD from './ChoiceDateAPOD'
+import GalleryAPOD from './GalleryAPOD'
 
 class ContentApod extends Component {
   componentDidMount() {
-    const { apod } = this.props;
-    if (apod.length === 1) this.props.getAPOD();
+    const { apod } = this.props
+    if (apod.length === 1) this.props.getAPOD()
 
     this.callBackendAPI()
       .then(res => console.log('node bekend', res))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   }
 
   callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
+    const response = await fetch('/express_backend')
+    const body = await response.json()
 
     if (response.status !== 200) {
-      throw Error(body.message);
+      throw Error(body.message)
     }
-    return body;
-  };
+    return body
+  }
 
   render() {
-    const { url, title, explanation, media_type } = this.props.apod[0];
-    console.log('split data picker');
+    const { url, title, explanation, media_type } = this.props.apod[0]
+    console.log('split data picker')
     return (
       <div className="concent_apod" style={{ color: 'white' }}>
         {!url && <Load />}
@@ -39,9 +39,7 @@ class ContentApod extends Component {
         {url && (
           <div className="row ">
             <div className="img_apod ">
-              {media_type === 'image' && (
-                <div className="image border" style={{ backgroundImage: `url(${url})` }} />
-              )}
+              {media_type === 'image' && <div className="image border" style={{ backgroundImage: `url(${url})` }} />}
               {media_type === 'video' && (
                 <iframe
                   src={`${url}&autoplay=1`}
@@ -74,7 +72,7 @@ class ContentApod extends Component {
 
         {/* {this.props.apod.length && this.props.apod.map(item => <p key={item.date}>{item.date}</p>)} */}
       </div>
-    );
+    )
   }
 }
 
@@ -83,4 +81,4 @@ export default connect(
     apod: state.apod,
   }),
   { getAPOD }
-)(ContentApod);
+)(ContentApod)
